@@ -1,0 +1,49 @@
+COMO PUBLICAR EL PORTAL GRATIS EN GITHUB PAGES
+==============================================
+Resultado: un enlace como  https://SU-USUARIO.github.io/portal-escuela-contreras/
+que la escuela puede enviar a los representantes. Es gratis.
+
+PASO 1. Cuenta
+  Entre a https://github.com y cree una cuenta gratuita (puede ser la de la escuela
+  o la de uno de ustedes; usen un correo que no se pierda).
+
+PASO 2. Crear el repositorio
+  - Boton verde "New" (o el "+" arriba a la derecha > New repository).
+  - Repository name:  portal-escuela-contreras   (sin espacios ni tildes)
+  - Marque  "Public"  (para que cualquier persona pueda abrir el enlace).
+  - Pulse "Create repository".
+
+PASO 3. Subir los archivos
+  - En la pagina del repositorio pulse "uploading an existing file".
+  - Descomprima el ZIP en su computador. Abra la carpeta "portal".
+  - Seleccione TODO lo que hay DENTRO de "portal" (index.html, institucion.html,
+    recaudos.html, precarga.html, noticias.html, LEEME.txt y las carpetas css, js e img)
+    y arrastrelo a la ventana de GitHub.
+    IMPORTANTE: index.html debe quedar en la raiz, no dentro de otra carpeta.
+  - Espere que termine de cargar y pulse "Commit changes".
+
+PASO 4. Activar la pagina publica
+  - Arriba, pestana "Settings" > menu izquierdo "Pages".
+  - En "Build and deployment" > Source: "Deploy from a branch".
+  - Branch: "main"  y carpeta "/ (root)"  > "Save".
+  - Espere 1 a 3 minutos y recargue. Arriba aparecera:
+    "Your site is live at https://SU-USUARIO.github.io/portal-escuela-contreras/"
+
+PASO 5. Probar
+  - Abra ese enlace desde su telefono.
+  - Entre a "Pre-carga de datos", llene el formulario, pulse "Descargar planilla en PDF"
+    y compruebe que el PDF se guarda y se imprime bien.
+  - Envie el enlace a la escuela (y puede hacer un codigo QR para pegarlo en la cartelera).
+
+COMO ACTUALIZAR FECHAS, TELEFONO, RECAUDOS O AVISOS
+  - En GitHub entre a la carpeta "js" > archivo "config.js".
+  - Pulse el icono del lapiz (Edit), cambie solo lo que esta entre comillas " ".
+  - Pulse "Commit changes". En 1 a 3 minutos el cambio ya esta en el enlace.
+
+IMPORTANTE
+  - Todo lo que se sube es PUBLICO. No suban datos personales de estudiantes ni listas.
+  - El portal no guarda los datos de las personas: se quedan en su propio telefono/computador.
+  - La fotografia del salon (img/salon.jpg) sera publica: confirmen con la direccion que
+    se puede mostrar (si aparecen ninos reconocibles, conviene tener autorizacion o cambiarla).
+  - Las personas necesitan internet solo para abrir el enlace la primera vez; luego el PDF
+    se arma en su equipo.

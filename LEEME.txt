@@ -1,0 +1,40 @@
+PORTAL INFORMATIVO - ESCUELA PRESBITERO FERNANDO MARIA CONTRERAS
+=====================================================================
+
+COMO LO USA LA GENTE (cuando esta publicado en internet)
+1. La escuela les envia el enlace (por WhatsApp, grupo de representantes, etc.).
+2. Entran al enlace desde el telefono o el computador.
+3. Llenan la pre-carga de datos y pulsan "Descargar planilla en PDF".
+4. Imprimen el PDF donde quieran, lo firman y lo llevan a la secretaria con los recaudos.
+Los datos escritos NO se envian ni se guardan en ningun servidor: el PDF se arma
+dentro del telefono o computador de cada persona.
+
+COMO PUBLICARLO GRATIS
+Lea el archivo GUIA_GITHUB_PAGES.txt (paso a paso).
+
+COMO PROBARLO EN UN COMPUTADOR (sin publicar)
+Descomprima la carpeta completa y haga doble clic en "index.html".
+Funciona sin internet, tambien el boton de descargar PDF.
+
+COMO ACTUALIZAR LOS DATOS (fechas, recaudos, telefono, avisos)
+- Abra con el Bloc de notas el archivo:  js/config.js
+- Cambie solo lo que esta entre comillas " ". No borre comas ni llaves.
+- Guarde. Si el portal esta publicado en GitHub, vuelva a subir ese archivo (ver la guia).
+- Si un dato queda vacio (""), el portal muestra "consultar en secretaria".
+
+CONTENIDO DE LA CARPETA
+index.html       Inicio
+institucion.html Resena, mision, vision, niveles, cifras
+recaudos.html    Lista de recaudos (con descarga en PDF)
+precarga.html    Formulario de pre-carga y planilla (descarga en PDF / imprimir)
+noticias.html    Avisos, cronograma y contacto
+css/estilos.css  Diseno (colores y tipografia)
+js/config.js     DATOS EDITABLES
+js/app.js        Logica del portal (formulario, validaciones)
+js/pdf.js        Generador de PDF (no editar)
+js/pdf-datos.js  Letras y escudo para el PDF (no editar)
+img/             Escudo y fotografias
+
+PARA DEMOSTRACIONES
+Abra precarga.html?demo  -> aparece un boton para rellenar el formulario con datos de ejemplo.
+(En el enlace normal ese boton no aparece.)

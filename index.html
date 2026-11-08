@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · U.E. Estadal Presbítero Fernando María Contreras</title>
+<meta name="description" content="Portal informativo de la U.E. Estadal Presbítero Fernando María Contreras, Capacho Nuevo: recaudos de inscripción y pre-carga de datos.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja no-imprimir"><div class="contenedor">
+  <span>Capacho Nuevo · Municipio Independencia · Estado Táchira</span>
+  <span class="tam" aria-label="Tamaño de letra">Tamaño de letra:
+    <button type="button" id="letraMenos" aria-label="Disminuir letra">A−</button>
+    <button type="button" id="letraMas" aria-label="Aumentar letra">A+</button></span>
+</div></div>
+<header class="cabecera no-imprimir"><div class="contenedor">
+  <a class="marca" href="index.html" aria-label="Ir al inicio">
+    <img src="img/escudo.png" alt="Escudo de la U.E. Estadal Presbítero Fernando María Contreras">
+    <span><span class="t1">Unidad Educativa Estadal</span><span class="t2">Presbítero Fernando María Contreras</span></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuNav">☰ Menú</button>
+  <nav class="principal" id="menuNav" aria-label="Principal"><ul><li><a href="index.html" class="activo" aria-current="page">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html" class="destacado">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul></nav>
+</div></header>
+<main id="contenido">
+
+<section class="heroe">
+  <div class="contenedor">
+    <div>
+      <span class="etiqueta">Período escolar <span id="periodo"></span></span>
+      <h1>Bienvenidos a la U.E. Estadal Presbítero Fernando María Contreras</h1>
+      <p class="lead">Consulte los recaudos de inscripción y deje listos los datos de su representado desde casa. Llegue a la escuela con la planilla ya completa e impresa.</p>
+      <div class="acciones">
+        <a class="btn btn-amarillo" href="precarga.html">Pre-cargar inscripción →</a>
+        <a class="btn btn-blanco" href="recaudos.html">Ver recaudos</a>
+      </div>
+    </div>
+    <div class="escudo-wrap"><img src="img/escudo.png" alt="Escudo de la institución: antorcha encendida sobre un escudo azul"></div>
+  </div>
+  <div class="onda" aria-hidden="true"><svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,24 C960,48 1200,6 1440,28 L1440,54 L0,54 Z" fill="#f6f9fe"/></svg></div>
+</section>
+
+<section class="bloque" style="padding-top:1.5rem">
+  <div class="contenedor">
+    <div class="cifras">
+      <div class="cifra"><b>Inicial y Primaria</b><span>Niveles que atiende</span></div>
+      <div class="cifra"><b>Capacho Nuevo</b><span>Municipio Independencia</span></div>
+      <div class="cifra"><b>100 % gratuito</b><span>Consulta y pre-carga de datos</span></div>
+      <div class="cifra"><b>Planilla en PDF</b><span>Descárguela e imprímala donde quiera</span></div>
+    </div>
+    <div class="aviso azul" style="margin-top:1.6rem"><strong>Inscripciones:</strong> <span id="estadoInscripcion"></span> <span id="notaInscripcion"></span></div>
+  </div>
+</section>
+
+<section class="bloque blanco">
+  <div class="contenedor">
+    <div class="titulo-sec">
+      <span class="sobre">Acceso rápido</span>
+      <h2>¿Qué desea hacer hoy?</h2>
+      <p>Todo lo que antes se consultaba en la cartelera o se preguntaba en la entrada, ahora está en un solo lugar.</p>
+    </div>
+    <div class="rejilla g4">
+      <a class="tarjeta" href="recaudos.html"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17h8"/></svg></div><h3>Recaudos</h3><p>Lista de requisitos por nivel y grado, con casillas para marcar lo que ya tiene.</p><span class="mas">Consultar →</span></a>
+      <a class="tarjeta" href="precarga.html"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div><h3>Pre-carga de datos</h3><p>Llene el formulario en 4 pasos y genere la planilla de inscripción lista para imprimir.</p><span class="mas">Comenzar →</span></a>
+      <a class="tarjeta" href="institucion.html"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>La institución</h3><p>Conozca nuestra reseña, misión, visión y los niveles que atendemos.</p><span class="mas">Conocer →</span></a>
+      <a class="tarjeta" href="noticias.html"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></div><h3>Noticias y contacto</h3><p>Avisos del plantel, cronograma escolar y datos para comunicarse con nosotros.</p><span class="mas">Ver avisos →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="contenedor">
+    <div class="titulo-sec">
+      <span class="sobre">Paso a paso</span>
+      <h2>Así de sencillo es inscribir</h2>
+    </div>
+    <div class="rejilla g3 pasos">
+      <div class="tarjeta paso-tarjeta"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17h8"/></svg></div><h3>Revise los recaudos</h3><p>Verifique qué documentos necesita según el nivel o grado del estudiante.</p></div>
+      <div class="tarjeta paso-tarjeta"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Pre-cargue los datos</h3><p>Escriba la información en el formulario. El portal le avisa si falta algo o hay un error.</p></div>
+      <div class="tarjeta paso-tarjeta"><div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="9" rx="2"/><path d="M8 14h8v7H8z"/></svg></div><h3>Descargue, imprima y consigne</h3><p>Descargue su planilla en PDF, imprímala, fírmela y llévela a la secretaría junto con los recaudos.</p></div>
+    </div>
+    <div class="aviso" style="margin-top:2rem"><strong>Su información está protegida.</strong> Los datos que escribe se procesan únicamente en su propio teléfono o computador: el portal no los envía ni los guarda en ningún servidor.</div>
+  </div>
+</section>
+
+</main>
+<footer class="pie no-imprimir">
+  <div class="contenedor">
+    <div>
+      <div class="logo-pie"><img src="img/escudo.png" alt=""><strong>U.E. Estadal<br>Presbítero Fernando María Contreras</strong></div>
+      <p>Educación Inicial y Primaria en Capacho Nuevo, municipio Independencia, estado Táchira.</p>
+    </div>
+    <div>
+      <h3>Navegación</h3>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><span data-cfg="direccion"></span></li>
+        <li>Tel.: <span data-cfg="telefono" data-vacio="consultar en secretaría"></span></li>
+        <li>Atención: <span data-cfg="horarioAtencion" data-vacio="consultar en secretaría"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="final">Proyecto socio integrador · PNF en Informática · Universidad Politécnica Territorial Agroindustrial del Estado Táchira (UPTAI) · <span id="anioPie"></span></div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

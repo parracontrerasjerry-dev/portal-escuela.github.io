@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recaudos de inscripción · U.E. Estadal Presbítero Fernando María Contreras</title>
+<meta name="description" content="Lista de recaudos de inscripción por nivel y grado.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja no-imprimir"><div class="contenedor">
+  <span>Capacho Nuevo · Municipio Independencia · Estado Táchira</span>
+  <span class="tam" aria-label="Tamaño de letra">Tamaño de letra:
+    <button type="button" id="letraMenos" aria-label="Disminuir letra">A−</button>
+    <button type="button" id="letraMas" aria-label="Aumentar letra">A+</button></span>
+</div></div>
+<header class="cabecera no-imprimir"><div class="contenedor">
+  <a class="marca" href="index.html" aria-label="Ir al inicio">
+    <img src="img/escudo.png" alt="Escudo de la U.E. Estadal Presbítero Fernando María Contreras">
+    <span><span class="t1">Unidad Educativa Estadal</span><span class="t2">Presbítero Fernando María Contreras</span></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuNav">☰ Menú</button>
+  <nav class="principal" id="menuNav" aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html" class="activo" aria-current="page">Recaudos</a></li><li><a href="precarga.html" class="destacado">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul></nav>
+</div></header>
+<main id="contenido">
+<section class="heroe-int no-imprimir"><div class="contenedor"><h1>Recaudos de inscripción</h1><p>Marque lo que ya tiene listo y lleve todo completo a la secretaría.</p></div><div class="onda" aria-hidden="true"><svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,24 C960,48 1200,6 1440,28 L1440,54 L0,54 Z" fill="#f6f9fe"/></svg></div></section>
+<section class="bloque">
+  <div class="contenedor" style="max-width:860px">
+    <div class="aviso no-imprimir"><strong>Importante:</strong> esta es una lista referencial. La secretaría puede solicitar documentos adicionales según cada caso. Ante cualquier duda, consulte directamente en el plantel.</div>
+    <h2>¿Para qué nivel o grado inscribe?</h2>
+    <div class="pestanas no-imprimir" id="pestanas" role="tablist" aria-label="Nivel o grado"></div>
+    <div class="progreso" aria-hidden="true"><div id="progresoBarra"></div></div>
+    <p id="progresoTxt" aria-live="polite" style="font-weight:700;color:var(--azul)"></p>
+    <ul class="check-lista" id="listaRecaudos"></ul>
+    <div class="acciones no-imprimir">
+      <button class="btn btn-azul" type="button" id="btnPDFLista">⬇ Descargar lista en PDF</button>
+      <button class="btn btn-borde" type="button" id="btnImprimirLista">🖨 Imprimir esta lista</button>
+      <a class="btn btn-amarillo" href="precarga.html">Pre-cargar la planilla →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="pie no-imprimir">
+  <div class="contenedor">
+    <div>
+      <div class="logo-pie"><img src="img/escudo.png" alt=""><strong>U.E. Estadal<br>Presbítero Fernando María Contreras</strong></div>
+      <p>Educación Inicial y Primaria en Capacho Nuevo, municipio Independencia, estado Táchira.</p>
+    </div>
+    <div>
+      <h3>Navegación</h3>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><span data-cfg="direccion"></span></li>
+        <li>Tel.: <span data-cfg="telefono" data-vacio="consultar en secretaría"></span></li>
+        <li>Atención: <span data-cfg="horarioAtencion" data-vacio="consultar en secretaría"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="final">Proyecto socio integrador · PNF en Informática · Universidad Politécnica Territorial Agroindustrial del Estado Táchira (UPTAI) · <span id="anioPie"></span></div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/pdf-datos.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

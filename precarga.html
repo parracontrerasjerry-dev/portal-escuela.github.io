@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-carga de datos · U.E. Estadal Presbítero Fernando María Contreras</title>
+<meta name="description" content="Formulario para pre-cargar los datos de inscripción y generar la planilla imprimible.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja no-imprimir"><div class="contenedor">
+  <span>Capacho Nuevo · Municipio Independencia · Estado Táchira</span>
+  <span class="tam" aria-label="Tamaño de letra">Tamaño de letra:
+    <button type="button" id="letraMenos" aria-label="Disminuir letra">A−</button>
+    <button type="button" id="letraMas" aria-label="Aumentar letra">A+</button></span>
+</div></div>
+<header class="cabecera no-imprimir"><div class="contenedor">
+  <a class="marca" href="index.html" aria-label="Ir al inicio">
+    <img src="img/escudo.png" alt="Escudo de la U.E. Estadal Presbítero Fernando María Contreras">
+    <span><span class="t1">Unidad Educativa Estadal</span><span class="t2">Presbítero Fernando María Contreras</span></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuNav">☰ Menú</button>
+  <nav class="principal" id="menuNav" aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html" class="activo destacado" aria-current="page">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul></nav>
+</div></header>
+<main id="contenido">
+<section class="heroe-int no-imprimir"><div class="contenedor"><h1>Pre-carga de datos de inscripción</h1><p>Complete el formulario en cuatro pasos, descargue su planilla en PDF, imprímala y llévela a la escuela.</p></div><div class="onda" aria-hidden="true"><svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,24 C960,48 1200,6 1440,28 L1440,54 L0,54 Z" fill="#f6f9fe"/></svg></div></section>
+<section class="bloque">
+  <div class="contenedor" style="max-width:900px">
+    <div class="sin-imprimir-planilla" id="formCaja">
+      <div class="aviso azul no-imprimir"><strong>Sus datos no salen de su teléfono o computador.</strong> El portal no los envía ni los guarda: solo se usan para armar su planilla en PDF. Los campos con <span style="color:var(--rojo);font-weight:700">*</span> son obligatorios.</div>
+      <ol class="indicador" id="indicador">
+        <li class="activo">Estudiante</li><li>Representante</li><li>Salud y emergencia</li><li>Revisión</li>
+      </ol>
+      <form id="formPrecarga" class="tarjeta" novalidate autocomplete="off">
+
+        <fieldset class="paso">
+          <legend>Datos del estudiante</legend>
+          <div class="campos">
+            <div class="campo"><label for="estApellidos">Apellidos <span class="req" aria-hidden="true">*</span></label><input id="estApellidos" name="estApellidos" type="text" required data-tipo='nombre'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estNombres">Nombres <span class="req" aria-hidden="true">*</span></label><input id="estNombres" name="estNombres" type="text" required data-tipo='nombre'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estCedulaEscolar">Cédula escolar o de identidad</label><input id="estCedulaEscolar" name="estCedulaEscolar" type="text" data-tipo='cedulaEscolar'><span class="ayuda">Opcional. Déjelo vacío si el estudiante no la posee.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estSexo">Sexo <span class="req" aria-hidden="true">*</span></label><select id="estSexo" name="estSexo" required><option value="">Seleccione…</option><option>Femenino</option><option>Masculino</option></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estFechaNac">Fecha de nacimiento <span class="req" aria-hidden="true">*</span></label><input id="estFechaNac" name="estFechaNac" type="date" required data-tipo='fechaNac'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estLugarNac">Lugar de nacimiento <span class="req" aria-hidden="true">*</span></label><input id="estLugarNac" name="estLugarNac" type="text" required data-tipo='nombre'><span class="ayuda">Ciudad y estado.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estNivel">Nivel <span class="req" aria-hidden="true">*</span></label><select id="estNivel" name="estNivel" required><option value="">Seleccione…</option></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estGrado">Grado o nivel a cursar <span class="req" aria-hidden="true">*</span></label><select id="estGrado" name="estGrado" required></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estIngreso">Tipo de ingreso <span class="req" aria-hidden="true">*</span></label><select id="estIngreso" name="estIngreso" required><option value="">Seleccione…</option><option>Nuevo ingreso</option><option>Prosecución (ya es estudiante de la escuela)</option></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estProcedencia">Plantel de procedencia</label><input id="estProcedencia" name="estProcedencia" type="text" ><span class="ayuda">Solo si viene de otra escuela o preescolar.</span><span class="error" role="alert"></span></div>
+          </div>
+          <div class="nav-pasos"><span></span><button class="btn btn-azul" type="button" data-sig>Siguiente →</button></div>
+        </fieldset>
+
+        <fieldset class="paso">
+          <legend>Datos del representante</legend>
+          <div class="campos">
+            <div class="campo"><label for="repApellidos">Apellidos <span class="req" aria-hidden="true">*</span></label><input id="repApellidos" name="repApellidos" type="text" required data-tipo='nombre'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repNombres">Nombres <span class="req" aria-hidden="true">*</span></label><input id="repNombres" name="repNombres" type="text" required data-tipo='nombre'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repCedula">Cédula de identidad <span class="req" aria-hidden="true">*</span></label><input id="repCedula" name="repCedula" type="text" required data-tipo='cedula' inputmode='numeric'><span class="ayuda">Solo números, sin puntos.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repParentesco">Parentesco con el estudiante <span class="req" aria-hidden="true">*</span></label><select id="repParentesco" name="repParentesco" required><option value="">Seleccione…</option><option>Madre</option><option>Padre</option><option>Abuelo(a)</option><option>Tío(a)</option><option>Hermano(a) mayor</option><option>Otro familiar</option><option>Tutor(a) legal</option></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repTelefono">Teléfono <span class="req" aria-hidden="true">*</span></label><input id="repTelefono" name="repTelefono" type="tel" required data-tipo='telefono' inputmode='tel'><span class="ayuda">Ej.: 0414-1234567</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repCorreo">Correo electrónico</label><input id="repCorreo" name="repCorreo" type="email" ><span class="ayuda">Opcional.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="repOcupacion">Ocupación</label><input id="repOcupacion" name="repOcupacion" type="text" ><span class="error" role="alert"></span></div>
+            <div class="campo ancho"><label for="repDireccion">Dirección de habitación <span class="req" aria-hidden="true">*</span></label><textarea id="repDireccion" name="repDireccion" rows="2" required></textarea><span class="error" role="alert"></span></div>
+          </div>
+          <div class="nav-pasos"><button class="btn btn-borde" type="button" data-ant>← Anterior</button><button class="btn btn-azul" type="button" data-sig>Siguiente →</button></div>
+        </fieldset>
+
+        <fieldset class="paso">
+          <legend>Salud y contacto de emergencia</legend>
+          <div class="campos">
+            <div class="campo"><label for="estAlergias">Alergias</label><input id="estAlergias" name="estAlergias" type="text" ><span class="ayuda">Escriba «Ninguna» si no tiene.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="estCondicion">Condición médica relevante</label><input id="estCondicion" name="estCondicion" type="text" ><span class="ayuda">Ej.: asma, uso de lentes, etc.</span><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="emerNombre">Persona de contacto en emergencias <span class="req" aria-hidden="true">*</span></label><input id="emerNombre" name="emerNombre" type="text" required data-tipo='nombre'><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="emerParentesco">Parentesco <span class="req" aria-hidden="true">*</span></label><select id="emerParentesco" name="emerParentesco" required><option value="">Seleccione…</option><option>Madre</option><option>Padre</option><option>Abuelo(a)</option><option>Tío(a)</option><option>Hermano(a) mayor</option><option>Otro familiar</option><option>Tutor(a) legal</option><option>Vecino(a) o amigo(a)</option></select><span class="error" role="alert"></span></div>
+            <div class="campo"><label for="emerTelefono">Teléfono de emergencia <span class="req" aria-hidden="true">*</span></label><input id="emerTelefono" name="emerTelefono" type="tel" required data-tipo='telefono' inputmode='tel'><span class="error" role="alert"></span></div>
+          </div>
+          <div class="nav-pasos"><button class="btn btn-borde" type="button" data-ant>← Anterior</button><button class="btn btn-azul" type="button" data-sig>Siguiente →</button></div>
+        </fieldset>
+
+        <fieldset class="paso">
+          <legend>Revise sus datos</legend>
+          <p>Compruebe que todo esté correcto. Si algo no es así, use «Anterior» para corregirlo.</p>
+          <div class="resumen" id="resumen"></div>
+          <div class="campo" style="margin-top:1rem">
+            <label style="display:flex;gap:.6rem;align-items:flex-start;font-weight:600"><input type="checkbox" id="aceptaDatos" required style="width:22px;height:22px;flex:none;accent-color:var(--azul)"> Declaro que los datos indicados son verdaderos.</label>
+            <span class="error" role="alert"></span>
+          </div>
+          <div class="nav-pasos"><button class="btn btn-borde" type="button" data-ant>← Anterior</button><button class="btn btn-rojo" type="submit">Generar planilla ✔</button></div>
+        </fieldset>
+      </form>
+      <p class="no-imprimir" id="cajaEjemplo" hidden style="text-align:center;margin-top:1rem"><button type="button" id="btnEjemplo" class="btn btn-borde" style="font-size:.85rem;padding:.4rem .9rem">Rellenar con datos de ejemplo (demostración)</button></p>
+    </div>
+    
+<div id="planillaWrap">
+  <div class="acciones no-imprimir" style="margin:0 auto 1.2rem;max-width:820px">
+    <button class="btn btn-rojo" type="button" id="btnPDF">⬇ Descargar planilla en PDF</button>
+    <button class="btn btn-azul" type="button" id="btnImprimir">🖨 Imprimir ahora</button>
+    <button class="btn btn-borde" type="button" id="btnCorregir">✎ Corregir datos</button>
+    <button class="btn btn-borde" type="button" id="btnNueva">+ Otra planilla</button>
+  </div>
+  <div class="aviso azul no-imprimir" style="max-width:820px;margin:0 auto 1.2rem"><strong>¿Qué sigue?</strong>
+  <ol style="margin:.4rem 0 0;padding-left:1.3rem"><li>Pulse <strong>«Descargar planilla en PDF»</strong>. El archivo se guarda en su teléfono o computador.</li><li>Imprímalo (en su casa, en un café internet o en cualquier papelería).</li><li>Fírmelo y llévelo a la secretaría de la escuela junto con los recaudos.</li></ol>
+  <span id="msgPDF" role="status" style="display:block;margin-top:.5rem;font-weight:700;color:var(--ok)"></span></div>
+  <article class="planilla" id="planilla">
+    <header>
+      <img src="img/escudo.png" alt="">
+      <div class="enc">República Bolivariana de Venezuela<br>Ministerio del Poder Popular para la Educación<br>Zona Educativa del Estado Táchira<br><strong>U.E. Estadal Presbítero Fernando María Contreras</strong><br>Capacho Nuevo · Municipio Independencia · Estado Táchira</div>
+    </header>
+    <h2 class="tit">Planilla de pre-inscripción</h2>
+    <p class="sub">Período escolar <span data-f="periodo"></span></p>
+    <p class="folio">N.º <strong data-f="folio"></strong> · Emitida el <span data-f="fechaEmision"></span></p>
+
+    <div class="sec">1. Datos del estudiante</div>
+    <table>
+      <tr><th>Apellidos</th><td><span data-f="estApellidos"></span></td><th>Nombres</th><td><span data-f="estNombres"></span></td></tr>
+      <tr><th>Cédula escolar / identidad</th><td><span data-f="estCedulaEscolar"></span></td><th>Sexo</th><td><span data-f="estSexo"></span></td></tr>
+      <tr><th>Fecha de nacimiento</th><td><span data-f="estFechaNac"></span></td><th>Lugar de nacimiento</th><td><span data-f="estLugarNac"></span></td></tr>
+      <tr><th>Nivel</th><td><span data-f="estNivel"></span></td><th>Grado / nivel a cursar</th><td><span data-f="estGrado"></span></td></tr>
+      <tr><th>Tipo de ingreso</th><td><span data-f="estIngreso"></span></td><th>Plantel de procedencia</th><td><span data-f="estProcedencia"></span></td></tr>
+    </table>
+
+    <div class="sec">2. Datos del representante</div>
+    <table>
+      <tr><th>Apellidos</th><td><span data-f="repApellidos"></span></td><th>Nombres</th><td><span data-f="repNombres"></span></td></tr>
+      <tr><th>Cédula de identidad</th><td><span data-f="repCedula"></span></td><th>Parentesco</th><td><span data-f="repParentesco"></span></td></tr>
+      <tr><th>Teléfono</th><td><span data-f="repTelefono"></span></td><th>Correo electrónico</th><td><span data-f="repCorreo"></span></td></tr>
+      <tr><th>Ocupación</th><td><span data-f="repOcupacion"></span></td><th>Dirección</th><td><span data-f="repDireccion"></span></td></tr>
+    </table>
+
+    <div class="sec">3. Salud y contacto de emergencia</div>
+    <table>
+      <tr><th>Alergias</th><td><span data-f="estAlergias"></span></td><th>Condición médica</th><td><span data-f="estCondicion"></span></td></tr>
+      <tr><th>Contacto de emergencia</th><td><span data-f="emerNombre"></span></td><th>Parentesco</th><td><span data-f="emerParentesco"></span></td></tr>
+      <tr><th>Teléfono de emergencia</th><td><span data-f="emerTelefono"></span></td><th></th><td></td></tr>
+    </table>
+
+    <div class="sec">4. Recaudos que debe consignar</div>
+    <ul class="rec" id="planRecaudos"></ul>
+
+    <div class="firmas">
+      <div>Firma del representante</div>
+      <div>Recibido por (secretaría)</div>
+      <div>Sello de la institución</div>
+    </div>
+    <p class="nota">Esta planilla es una pre-carga de datos. La inscripción queda formalizada únicamente al consignar esta planilla firmada junto con los recaudos ante la secretaría del plantel. El representante declara que los datos aquí indicados son verdaderos.</p>
+  </article>
+</div>
+
+  </div>
+</section>
+
+</main>
+<footer class="pie no-imprimir">
+  <div class="contenedor">
+    <div>
+      <div class="logo-pie"><img src="img/escudo.png" alt=""><strong>U.E. Estadal<br>Presbítero Fernando María Contreras</strong></div>
+      <p>Educación Inicial y Primaria en Capacho Nuevo, municipio Independencia, estado Táchira.</p>
+    </div>
+    <div>
+      <h3>Navegación</h3>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><span data-cfg="direccion"></span></li>
+        <li>Tel.: <span data-cfg="telefono" data-vacio="consultar en secretaría"></span></li>
+        <li>Atención: <span data-cfg="horarioAtencion" data-vacio="consultar en secretaría"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="final">Proyecto socio integrador · PNF en Informática · Universidad Politécnica Territorial Agroindustrial del Estado Táchira (UPTAI) · <span id="anioPie"></span></div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/pdf-datos.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

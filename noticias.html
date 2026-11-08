@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noticias y contacto · U.E. Estadal Presbítero Fernando María Contreras</title>
+<meta name="description" content="Avisos, cronograma escolar y contacto de la institución.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja no-imprimir"><div class="contenedor">
+  <span>Capacho Nuevo · Municipio Independencia · Estado Táchira</span>
+  <span class="tam" aria-label="Tamaño de letra">Tamaño de letra:
+    <button type="button" id="letraMenos" aria-label="Disminuir letra">A−</button>
+    <button type="button" id="letraMas" aria-label="Aumentar letra">A+</button></span>
+</div></div>
+<header class="cabecera no-imprimir"><div class="contenedor">
+  <a class="marca" href="index.html" aria-label="Ir al inicio">
+    <img src="img/escudo.png" alt="Escudo de la U.E. Estadal Presbítero Fernando María Contreras">
+    <span><span class="t1">Unidad Educativa Estadal</span><span class="t2">Presbítero Fernando María Contreras</span></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuNav">☰ Menú</button>
+  <nav class="principal" id="menuNav" aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html" class="destacado">Pre-carga de datos</a></li><li><a href="noticias.html" class="activo" aria-current="page">Noticias y contacto</a></li></ul></nav>
+</div></header>
+<main id="contenido">
+<section class="heroe-int no-imprimir"><div class="contenedor"><h1>Noticias y contacto</h1><p>Avisos de la escuela, cronograma del período escolar y cómo comunicarse con nosotros.</p></div><div class="onda" aria-hidden="true"><svg viewBox="0 0 1440 54" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,24 C960,48 1200,6 1440,28 L1440,54 L0,54 Z" fill="#f6f9fe"/></svg></div></section>
+<section class="bloque">
+  <div class="contenedor dos-col" style="align-items:start">
+    <div>
+      <h2>Avisos</h2>
+      <div class="rejilla" id="listaNoticias"></div>
+      <h2 style="margin-top:2.2rem">Cronograma escolar</h2>
+      <ul class="cron tarjeta" id="listaCronograma" style="padding:1rem 1.5rem"></ul>
+    </div>
+    <div>
+      <h2>Contáctenos</h2>
+      <div class="tarjeta" style="margin-bottom:1.3rem">
+        <ul class="lista-chulo">
+          <li><strong>Dirección:</strong> <span data-cfg="direccion"></span></li>
+          <li><strong>Teléfono:</strong> <span data-cfg="telefono" data-vacio="Consultar en la secretaría"></span></li>
+          <li><strong>Correo:</strong> <span data-cfg="correo" data-vacio="Aún no disponible"></span></li>
+          <li><strong>Horario:</strong> <span data-cfg="horarioAtencion" data-vacio="Consultar en la secretaría"></span></li>
+        </ul>
+      </div>
+      <form class="tarjeta" id="formContacto">
+        <h3>Envíenos un mensaje</h3>
+        <p class="aviso" id="avisoCorreo" hidden></p>
+        <div class="campos" style="grid-template-columns:1fr">
+          <div class="campo"><label for="cNombre">Su nombre</label><input id="cNombre" required></div>
+          <div class="campo"><label for="cAsunto">Asunto</label><input id="cAsunto" required></div>
+          <div class="campo"><label for="cMensaje">Mensaje</label><textarea id="cMensaje" rows="4" required></textarea></div>
+        </div>
+        <div class="acciones"><button class="btn btn-azul" type="submit">Enviar por correo</button></div>
+        <p class="ayuda" style="font-size:.82rem;color:var(--texto-suave);margin-top:.6rem">Se abrirá su programa de correo con el mensaje listo para enviar.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="pie no-imprimir">
+  <div class="contenedor">
+    <div>
+      <div class="logo-pie"><img src="img/escudo.png" alt=""><strong>U.E. Estadal<br>Presbítero Fernando María Contreras</strong></div>
+      <p>Educación Inicial y Primaria en Capacho Nuevo, municipio Independencia, estado Táchira.</p>
+    </div>
+    <div>
+      <h3>Navegación</h3>
+      <ul><li><a href="index.html">Inicio</a></li><li><a href="institucion.html">La Institución</a></li><li><a href="recaudos.html">Recaudos</a></li><li><a href="precarga.html">Pre-carga de datos</a></li><li><a href="noticias.html">Noticias y contacto</a></li></ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><span data-cfg="direccion"></span></li>
+        <li>Tel.: <span data-cfg="telefono" data-vacio="consultar en secretaría"></span></li>
+        <li>Atención: <span data-cfg="horarioAtencion" data-vacio="consultar en secretaría"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="final">Proyecto socio integrador · PNF en Informática · Universidad Politécnica Territorial Agroindustrial del Estado Táchira (UPTAI) · <span id="anioPie"></span></div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
